@@ -1,4 +1,4 @@
-package n7rider.chapter1;
+package n7rider.chapter1.arrays_and_strings;
 
 /**
  * 1.2 Check Permutation: Given two strings, write a method to decide if one is a permutation of the other.

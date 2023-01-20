@@ -1,4 +1,4 @@
-package n7rider.chapter1;
+package n7rider.chapter1.arrays_and_strings;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
