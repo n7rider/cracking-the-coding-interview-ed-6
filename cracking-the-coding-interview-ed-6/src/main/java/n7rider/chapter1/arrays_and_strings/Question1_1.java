@@ -8,6 +8,12 @@ import static org.junit.Assert.assertTrue;
  * Is Unique: Implement an algorithm to determine if a string has all unique characters. What if you
  * cannot use additional data structures?
  * Hints: #44, #7 7 7, #732
+ * ---
+ * Post-run observations:
+ * - The runtime is O(n)
+ * <p>
+ * After comparing with solution:
+ * - Almost similar to the approach there
  */
 public class Question1_1 {
     public static void main(String[] args) {
@@ -36,15 +42,18 @@ public class Question1_1 {
     }
 }
 /**
+ * Approach:
+ * ---
+ * <p>
  * for each char c in s
  * check if h contains c
- *      if yes, quit - NOT UNIQUE
- *      if no, add to h & continue
- *
+ * if yes, quit - NOT UNIQUE
+ * if no, add to h & continue
+ * <p>
  * number of char - 255
  * create boolean[255]
  * for each char c in s
- *      convert c to ASCII int i
- *      if boolean[i] == true, quit - NOT UNIQUE
- *      false - set b[i] = true, continue
+ * convert c to ASCII int i
+ * if boolean[i] == true, quit - NOT UNIQUE
+ * false - set b[i] = true, continue
  */
