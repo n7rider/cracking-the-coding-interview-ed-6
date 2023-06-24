@@ -46,14 +46,14 @@ public class Question1_1 {
  * ---
  * <p>
  * for each char c in s
- * check if h contains c
- * if yes, quit - NOT UNIQUE
- * if no, add to h & continue
+ *   check if h contains c
+ *   if yes, quit - NOT UNIQUE
+ *   if no, add to h & continue
  * <p>
  * number of char - 255
  * create boolean[255]
  * for each char c in s
- * convert c to ASCII int i
- * if boolean[i] == true, quit - NOT UNIQUE
- * false - set b[i] = true, continue
+ *   convert c to ASCII int i
+ *   if boolean[i] == true, quit - NOT UNIQUE
+ *   false - set b[i] = true, continue
  */

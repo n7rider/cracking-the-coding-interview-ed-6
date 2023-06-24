@@ -1,7 +1,5 @@
 package n7rider.chapter1.arrays_and_strings;
 
-import java.util.LinkedList;
-
 import static org.junit.Assert.assertEquals;
 
 /**
@@ -74,7 +72,7 @@ public class Question1_6 {
  * iterate through the string
  * keep adding as long as the char is same
  * if not same, concat char + count to the new string
- * store highest
+ *   store highest
  * repeat
  * if highest > 1,  return new string, else return original string
  * e.g., abcdef -> a1b1c1d1e1f1. So reusing string is not worth it.
@@ -82,11 +80,11 @@ public class Question1_6 {
  * prev_char=s[0]
  * count = 0
  * for i = 1 to s.length
- * char c = s[i]
- * if(c == prev_char)
- * count++
- * else
- * new_s += prev_char + count
- * prev_char = s[i]
+ *   char c = s[i]
+ *   if(c == prev_char)
+ *     count++
+ *   else
+ *     new_s += prev_char + count
+ *     prev_char = s[i]
  * new_s += prev_char + count
  */

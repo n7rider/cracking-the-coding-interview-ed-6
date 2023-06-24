@@ -80,25 +80,22 @@ public class Question1_3 {
  * Mr%20John
  * <p>
  * if char != %20
- * continue;
+ *   continue;
  * else
- * s[i]=%
+ *   s[i]=%
  * char t1=s[i+1] | char t2=s[i+2] (Check for index out of bounds for each)
  * insert '2', '0', t1, t2
  * This will fail if two spaces happen right next to each other
  * <p>
- * Mr J o ->
- * Mr%20J%20o
- * <p>
+ * Mr J o -> Mr%20J%20o
  * <p>
  * sp = 0 // maintains track of chars to keep in stack
  * if char == ' '
- * add 3 more elements to stack
- * pop stack
+ *   add 3 more elements to stack
+ *   pop stack
  * else
- * add element to stack
- * pop stack
- * <p>
+ *   add element to stack
+ *   pop stack
  * stack = array + int counter
  * <p>
  * Algorithm - if O(2n) is okay (instead of O(n));
@@ -108,11 +105,11 @@ public class Question1_3 {
  * set wi = l - 1 // write index
  * set x = "%20"
  * for i = ri - 1 to 0
- * if s[i] != ' '
- * s[wi] = s[ri]
- * else
- * for j = x.len - 1 to 0
- * s[wi--] = x[j]
+ *   if s[i] != ' '
+ *     s[wi] = s[ri]
+ *   else
+ *     for j = x.len - 1 to 0
+ *       s[wi--] = x[j]
  * <p>
  * Algorithm - If O(2(n) is not okay, we need to use stack
  * But this needs more space and complexity increases
