@@ -84,7 +84,7 @@ public class Question1_5 {
  * - To fix this, just count non-zeroes in the array. Should be <=2 .g., pale vs bale would return 2.
  * Won't work for strings of non-equal length e.g., palers vs pale
  * <p>
- * Appraoch 2 - Use bool array
+ * Approach 2 - Use bool array
  * - Put String 1 in an array of bool arr[ascii_index]=count
  * - For String 2, flip arr[ascii_index]=count
  * - Count all elements with 'true'. Must be -2 <= x <= 2
