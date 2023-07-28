@@ -15,7 +15,7 @@ import static org.junit.Assert.assertTrue;
  * <p>
  * After comparing with solution:
  * This is a trick solution. Just write s2 twice, and you should get s1 in the middle of it.
- * // TODO Try it out
+ *
  */
 public class Question1_9 {
 

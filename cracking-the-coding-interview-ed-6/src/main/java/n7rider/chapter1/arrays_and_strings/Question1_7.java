@@ -11,7 +11,7 @@ package n7rider.chapter1.arrays_and_strings;
  * After comparing with solution:
  * If you swapped the other way around, you would have needed only one backup (Hence no method to do copy)
  * The solution names n-1-i etc. as first, last etc. This keeps the code more readable
- * // TODO Try it out
+ * If you're repeating something often, this can be usually refactored
  *
  */
 public class Question1_7 {
@@ -29,11 +29,12 @@ public class Question1_7 {
             for (int i = z; i < n - 1; i++) {
                 char backup = arr[z][i];
                 backup = copy(arr, backup, i, n - 1);
+                // n -1 is the last one in the current square considered
+                // -i in (n -1 -i) is the offset. 0,3 -> 3,3 | 1,3 -> 3, and so on.
+                // +z is added to neutralize decreasing 'n' every time outer loop iterates
                 backup = copy(arr, backup, n - 1, n - 1 - i + z);
                 backup = copy(arr, backup, n - 1 - i + z, z);
                 copy(arr, backup, z, i);
-
-                //printMatrix(arr);
             }
             n--;
         }

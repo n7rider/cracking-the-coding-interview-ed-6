@@ -47,6 +47,7 @@ public class Question1_6 {
                 count++;
             } else {
                 result.append(pc);
+                // Adding + 0 converts int to char. Without it, it'll get the ASCII char for count's value
                 result.append((char) (count + '0'));
                 pc = c;
                 count = 1;
