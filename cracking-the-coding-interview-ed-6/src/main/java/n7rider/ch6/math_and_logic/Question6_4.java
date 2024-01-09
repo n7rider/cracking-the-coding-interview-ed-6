@@ -10,3 +10,32 @@ package n7rider.ch6.math_and_logic;
  */
 public class Question6_4 {
 }
+
+/**
+ *
+ *    ^
+ *   | \
+ *  |   \
+ *  -----
+ *
+ *  chance of collision = only if at-least one has a diff direction than the other
+ *
+ *  P = P(two in diff dir) + P (one in diff dir)
+ *    = 1/2 * 1/2 * 1/2 + 1/2 * 1/2 * 1/2 = 1/4
+ *
+ *  Alternative way: ALl possible events:
+ *  C C C | C C ac | C ac C | ac C C | ac ac C | ac C ac | C ac ac | ac ac ac
+ *
+ *  Total events = 8
+ *  Events with at least one ac but not all 3 ac = 6 / 8 = 3 / 4
+ *
+ *  Above P = 1/4 is wrong.
+ *
+ *  It should be P = P(one ac) +  P(two ac) = (1/2 * 1 * 1) + (1/2 * 1/2 * 1) = 1/2 + 1/4 = 3/4
+ *
+ *  Convert to n-vertex polygon?
+ *
+ *  Collision will not happen only it all ants move in the same direction, so P = 1 - 2 * (1/2^n)
+ *
+ *  Simplifying, P = 1 - 1/2^(n-1)
+ */
