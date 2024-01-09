@@ -16,7 +16,7 @@ import static org.junit.Assert.assertEquals;
  * Should know how to use hexadecimal numbers to create masks such as 101010..., 010101 etc. easily
  * Remember int has 32 bits (4 bytes), so you can create masks covering a whole int
  *
- * >> just shifts the sign bit, but >>> shifts the sign bit too. The book uses >>> to make sure the sign bit is 0
+ * >> just shifts the non-sign bits, but >>> shifts the sign bit too. The book uses >>> to make sure the sign bit is 0
  * Changing sign bit isn't needed even for negative numbers for e.g., -8 is 1111 1111 1111 1111 1111 1111 1111 1000
  * Its flipped form is 1111 1111 1111 1111 1111 1111 1111 0100 which is -12.
  * However, if we just use >>, the output is still -12. However, the individual shifts are odd.
