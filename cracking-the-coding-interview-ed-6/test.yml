@@ -1,0 +1,3 @@
+  POST /v1/locations
+  Parameters:
+  locs:  JSON array of (latitude longitude timestamp) tuples.
