@@ -11,6 +11,7 @@ import java.util.stream.Collectors;
 
  After finishing algorithm:
  Same as book
+ Subsets is for finding all combinations
 
  */
 public class Question8_4_Attempt2 {
