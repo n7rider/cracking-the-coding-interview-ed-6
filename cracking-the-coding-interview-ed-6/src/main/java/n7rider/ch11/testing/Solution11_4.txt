@@ -1,0 +1,37 @@
+/**
+ * No Test Tools: How would you load test a webpage without using any test tools?
+ */
+
+Simplest ways:
+Keep refreshing the browser page
+Open in different devices at the same time
+Do curl command from a terminal
+
+Complex ways:
+Create an application (not a test tool, but it can be one)
+Cause a breakpoint in JS code in browser
+Test large values for all user input in the page
+
+Peeked at the book solution, it goes about creating an application:
+
+So, a load test application should have these configureable:
+- No of users
+- No of hits by the same user (like opening a page in different tabs but sharing the same cookies, session)
+- No of seconds between each wave
+- No of hits per wave
+- Scaling up to find the breaking point
+    - No of seconds between each wave, no of hits per wave
+- Find recovery time
+    - Time to recover for x% of the traffic after breaking point
+
+Measure these traits while doing this:
+- CPU load
+- Memory load
+- DB load
+- Network load
+- Response time for each layer
+- Total hits
+- Total time
+
+From solution:
+It talks about threads can simulate different real-world users loading a page. Yup!

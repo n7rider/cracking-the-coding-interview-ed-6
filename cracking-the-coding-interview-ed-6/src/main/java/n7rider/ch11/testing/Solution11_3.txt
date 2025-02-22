@@ -1,0 +1,55 @@
+
+/**
+ * ChessTest:We have the following method used in a chess game: boolean canMoveTo(int x,
+ * int y). This method is part of the Piece class and returns whether or not the piece can move to
+ * position (x, y). Explain how you would test this method
+ */
+
+Piece class is inherited by all pieces on the board
+
+Piece {
+ Color color (BLACK or WHITE)
+ abstract boolean canMoveTo(int x, int y)
+}
+
+Pawn extends Piece {
+ abstract boolean canMoveTo(int x, int y)
+}
+
+Context (i.e., each piece object has access to wider-scoped objects such as):
+
+Game currGame
+Board currBoard
+    getPieceByPosition // Map<int[], Piece]
+    getPositionByPiece // Map<Piece, int[])
+
+
+We're not implementing it, we'll test it.
+
+Chess workflows:
+0 Init layout
+1 Move pieces alternatively // Testing happens here
+2 Capture pieces // Testing happens here
+3 End game or process game event that span a few turns //Testing happens here e.g., checkmate or stalemate
+
+Workflow 1
+Moving pieces i.e., to (x,y) when it is not occupied
+  - Is game state valid
+  - Is x, y valid
+  - Can this piece go in that direction, go that far?
+  - Has this piece done it before (e.g., stalemate, castling, en passant)
+  - Any piece in the middle? (applicable for other pieces but not knight)
+
+  - Are events getting recorded (e.g., repetitive moves for stalemate, castling, en passant, opens a checkmate)
+
+Workflow 2
+Capture pieces i.e., moving pieces to (x, y) when occupied
+  - All of workflow 1 + the following
+  - Is occupied by opponent
+  - Does this call the board to remove the captured piece?
+
+Workflow 3
+  - Does it record events?
+  - Does it process the events for special conditions e.g., stalemate, checkmate etc.
+  - Does it call the board to act on triggered conditions e.g., remove a captured piece,
+        capture pawn en passant, promotion
