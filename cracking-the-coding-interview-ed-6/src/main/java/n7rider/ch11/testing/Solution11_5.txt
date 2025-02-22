@@ -1,0 +1,48 @@
+/**
+ * Test a Pen: How would you test a pen?
+ */
+
+Gather requirements about pen:
+Type of pen - ball point | gel | space pen etc.
+Pen color range - single | multi
+Color - array of colors
+Addition features - Glitter, with flavor
+Body - Plastic | Aluminum | Titanium
+Style - Looks, comfort (grips)
+Accessories - Cap, ink remover, additional refills
+
+Gather usage requirement:
+Target users - Office | Students | Luxury | Extreme weather
+Operating range - temperature | pressure | gravity (will it work if placed upside down and shaken) etc
+Breaking point behavior - don't spill ink, no sharp objects inside etc.
+Lifetime - How many metres can you draw
+
+Gather use cases:
+Writing,
+transport environment and context,
+Usage frequency per day
+Usage duration per day
+
+Testing tools
+Robotic arm that can move up/down, left/write based on instructions and timer
+Manual user checking
+Environmental testing for drops, temperature
+
+Testing:
+- Test if 'pen requirements' are as expected?
+    Test manually,
+    Use a robotic eye for visual features
+    Mount on robotic arm to test color, features
+
+- Test 'usage requirements'
+    Environmental testing
+    Manually reach breaking point or use tools like hammer
+    Keep running on robotic arm to check lifetime
+
+- Test 'use cases'
+    Keep running on robotic arm to check lifetime according to specs
+    Feedback from manual testers
+
+
+After checking solution:
+I didn't add target use in usage requirement. That checks if it works on canvas, paper or wherever the pen is used.

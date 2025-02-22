@@ -1,0 +1,16 @@
+
+/**
+ * Mistake: Find the mistake(s) in the following code:
+ * unsigned int i;
+ * for (i = 100; i >= 0; --i)
+ *    printf("%d\n", i);
+ */
+
+1. Unsigned int won't have a sign, so the loop won't run correctly. It will become 1 after 0.
+2. Even if `unsigned` is removed, it'll run 101 times, and not 100 times.
+
+After finishing:
+- unsigned int is not available in Java, only in C, C++
+
+After comparing:
+- The book suggests using %u to print unsigned int

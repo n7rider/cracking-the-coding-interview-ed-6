@@ -1,0 +1,33 @@
+
+/**
+ * Random Crashes: You are given the source to an application which crashes when it is run. After
+ * running it ten times in a debugger, you find it never crashes in the same place. The application is
+ * single threaded, and uses only the C standard library. What programming errors could be causing
+ * this crash? How would you test each one?
+ */
+
+Facts:
+1. Never crashes in the same place
+2. Single threaded
+3. No unknown libraries
+
+Testing based on these facts
+1.
+    a. External factors - Check memory footprint, storage available
+    b. Code pattern - Failing when calling the same code, same variables, similar workflows, similar duration
+        (e.g., after 5 min)
+    c. Code errors - Incorrect syntax, wrong pointer usage, unhandled exception
+    d. Business factors - Unsupported feature, unintended way to use a feature, any previous workflow contributing
+        to the failure
+    e. Environment issues - Debug vs Execution version compatibility
+2.
+    a. No multi threading involved, so concurrent modification is not the issue
+    b. However, infinite waits or timeouts are still possible, so look for that.
+    c. See 1(a)
+3.
+    a. Errors invoking a library method - See 1(c)
+
+After comparison:
+    Code errors - also look for uninitialized variable having an arbitrary value, random value out of bounds
+    Structured way of approach - When writing out factors, walk through the sequence and write everything down, not random
+        things you can think of.

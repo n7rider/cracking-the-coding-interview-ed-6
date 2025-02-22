@@ -1,0 +1,48 @@
+/**
+ * Test an ATM: How would you test an ATM in a distributed banking system?
+ */
+
+Gather specs of the system
+Gather usage requirements
+Gather failure scenarios and behavior
+Determine testing methods
+List test
+
+System specs:
+Number of notes
+Type of notes
+Size, number of users (With multiple users, concurrency problems are possible)
+Max notes, max value per txn/per day
+
+Usage specs:
+Tech users (use QR code, OTPs), normal users
+Interaction method - touch / keypad
+Features - Withdraw, deposit etc.
+
+Scenarios:
+1 Withdraw money (single user, multi-user)
+2 Check balance
+3 Deposit check
+4 Change PIN
+
+Failure scenarios:
+1 Incorrect PIN, no notes left, network issue - Return card, no cash deducted
+2 A 2 hour per 3 days - For loading up on notes
+3 Printer fails for receipt - Show QR code or send mail/SMS
+4 Timeout - Return card, no cash deducted
+
+Testing methods:
+Manual users
+Counting machine to count dispensed notes
+Robotic arm to enter values (Or connect a automation suite if we can replace keypad with a keyboard driver)
+
+List test:
+Workflow - happy path: Insert card > Enter PIN > List details > Perform Scenario 1-4 - Get response - Get card back
+Error paths: Get failure scenario 1-3 as the penultimate step and check if recovers fine
+Complex workflows:
+    Try multiple scenarios before stopping
+    Try timeouts
+    Enter random values when machine is still checking balance
+    Enter invalid card e.g., hotel card
+    Kick out after max operations e.g., set limit to 3
+
