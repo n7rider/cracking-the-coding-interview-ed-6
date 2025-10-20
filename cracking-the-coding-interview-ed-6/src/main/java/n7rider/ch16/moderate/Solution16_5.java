@@ -6,7 +6,7 @@ import static org.junit.Assert.assertEquals;
  * Factorial Zeros: Write an algorithm which computes the number of trailing zeros in n factorial.
  *
  * After finishing:
- * There was a gotcha starting at 25! and I missed it because finding the numbers became too cumbersome.
+ * There was a gotcha starting at 5! and I missed it because finding the numbers became too cumbersome.
  * If examples are getting difficult, maybe I can try to divert that time towards the logic to look for a gotcha.
  *
  * After comparing:
